@@ -1,0 +1,27 @@
+.half-bg h1 {
+    font-family: 'Petrona', serif;
+    font-size: 64px;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-left: 80px;
+    color: white;
+}
+
+.half-bg {
+    margin-top: -63px;
+    height: 670px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 65%;
+    padding-top: 4rem;
+}
+
+.full-bg {
+    margin: 0 auto;
+    height: 670px;
+    width: 100%;
+    padding-top: 4rem;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

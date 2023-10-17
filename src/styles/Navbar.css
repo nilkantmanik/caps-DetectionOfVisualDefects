@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 112px;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 65px;
+}
+
+.navbar .leftSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+  
+
+.navbar .rightside {
+    display: flex;
+    font-family: 'Kodchasan', sans-serif;
+    gap: 27px; 
+}
+
+
+
+

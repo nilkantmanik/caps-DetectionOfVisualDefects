@@ -1,0 +1,81 @@
+
+.upload-container{
+    display: flex;
+}
+
+.predict-btn {
+    margin: 0 auto;
+    background: var(--blue);
+    color: white;
+    border: 0px var(--blue);
+    padding: 20px;
+    width: 203px;
+    font-family: 'Petrona', serif;
+    font-size: 24px;
+    border-radius: 250px;
+    margin-left: 283px;
+}
+
+.upload-label {
+    height: 100px; 
+    width: 150px;
+    border-radius: 6px;
+    border: 1px
+}
+
+.upload-container {
+    margin: 0 auto;
+    margin-top: 55px;
+    width: 740px;
+    border-radius: 250px;
+    background: white;
+    padding: 16px; 
+    align-items: center;
+}
+
+.detect-cntr {
+    background-color: var(--blue);
+    margin-top: 70px;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 392px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding-top: 42px;
+    font-size: 48px;
+}
+
+.title {
+    font-family: 'Petrona', serif;
+    font-size: 64px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-left: 80px;
+    color: white;
+}
+
+
+.half-bg {
+    margin-top: -63px;
+    height: 670px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 65%;
+    padding-top: 4rem;
+}
+
+.full-bg {
+    margin: 0 auto;
+    height: 670px;
+    width: 100%;
+    padding-top: 4rem;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
