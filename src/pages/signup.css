@@ -1,0 +1,37 @@
+.signuppage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Adjust the height to cover the entire viewport if needed */
+    background-color: #173AA4;
+  }
+
+
+  .form-group {
+    margin: 10px;
+    width: 400px; /* Adjust the width as needed */
+    /* height: 100px; */
+  }
+
+  .form-group input {
+    width: 100%; /* Set the width to 100% of the parent container */
+    padding: 10px; /* Adjust the padding as needed */
+    border: 1px solid #ccc; /* Add border styles as needed */
+    border-radius: 5px; /* Adjust border-radius as needed */
+  }
+  
+  .btn {
+    width: 400px; /* Adjust the width as needed */
+  }
+
+  .custom-svgtr {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .custom-svglb {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }

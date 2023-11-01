@@ -9,13 +9,16 @@
     color: white;
     border: 0px var(--blue);
     padding: 20px;
-    width: 203px;
+    width: 169px;
     font-family: 'Petrona', serif;
     font-size: 24px;
     border-radius: 250px;
-    margin-left: 283px;
+    margin-left: 420px;
 }
 
+#uploadText {
+    cursor: "pointer";
+}
 .upload-label {
     height: 100px; 
     width: 150px;
@@ -23,10 +26,17 @@
     border: 1px
 }
 
+#patinputdiv input {
+    width: 20%; /* Set the width to 100% of the parent container */
+    padding: 10px; /* Adjust the padding as needed */
+    border: 1px solid #ccc; /* Add border styles as needed */
+    border-radius: 5px; /* Adjust border-radius as needed */
+  }
+
 .upload-container {
     margin: 0 auto;
-    margin-top: 55px;
-    width: 740px;
+    margin-top: 155px;
+    width: 65%;
     border-radius: 250px;
     background: white;
     padding: 16px; 
@@ -35,9 +45,10 @@
 
 .detect-cntr {
     background-color: var(--blue);
+    border-radius: 30px;
     margin-top: 70px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 165px;
+    margin-right: 165px;
     height: 392px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -47,7 +58,7 @@
     margin: 0 auto;
     text-align: center;
     display: block;
-    padding-top: 42px;
+    padding-top: 10px;
     font-size: 48px;
 }
 
@@ -58,6 +69,7 @@
     margin-top: 0px;
     margin-left: 80px;
     color: white;
+    font-weight: bold;
 }
 
 
