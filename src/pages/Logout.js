@@ -11,6 +11,7 @@ function Logout() {
   const handleLogout = async () => {
     // e.preventDefault();
     dispatch(removeEmail());
+    localStorage.clear()
     navigate("/");
     
   };

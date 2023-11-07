@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
-
-import { useSelector } from "react-redux";
+import back_image from '../images/back_img.jpg'
+// import { useSelector } from "react-redux";
 
 function Patientlist() {
-  let useremail = useSelector((state) => state.doctoremail);
+  // let useremail = useSelector((state) => state.doctoremail);
+  let useremail = JSON.parse(localStorage.getItem("loggedinemail")).loggedinemail;
 
   const [patientList, setPatientList] = useState([]);
 
@@ -30,9 +31,16 @@ function Patientlist() {
   return (
     <>
       <Navbar />
-    
-      <div className="patlistpage" style={{ backgroundColor:"#6c99f5", height: "100vh" }}>
-      <table style={{ width: "80%", border: "1px solid black", borderCollapse: "collapse" }}>
+      <div
+        className="background-image"
+        style={{
+          backgroundImage: `url(${back_image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: 'calc(100vh - -4px)', // Adjusted for typical Navbar height
+        }}>
+      <div className="patlistpage" style={{  height: "100vh" }}>
+      <table style={{ width: "80%", border: "1px solid black", borderCollapse: "collapse",margin:"15px 150px" }}>
           <thead>
             <tr>
               <th style={{ border: "1px solid black", padding: "10px" }}>Name</th>
@@ -45,12 +53,13 @@ function Patientlist() {
               patientList.map((patient, index) => (
                 <tr key={index}>
                   <td style={{ border: "1px solid black", padding: "10px" }}>{patient.name}</td>
-                  <td style={{ border: "1px solid black", padding: "10px" }}>{patient.email}</td>
+                  <td style={{ border: "1px solid black", padding: "10px" }}>{patient.patemail}</td>
                   <td style={{ border: "1px solid black", padding: "10px" }}>{patient.prediction}</td>
                 </tr>
               ))}
           </tbody>
         </table>
+      </div>
       </div>
     </>
   );

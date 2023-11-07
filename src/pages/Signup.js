@@ -23,9 +23,10 @@ const handleSubmit = async (e) => {
           password,
         });
         console.log(response.data);
+        localStorage.setItem("loggedinemail", JSON.stringify({loggedinemail: email}));
         navigate('/home');
     }catch (error) {
-        console.error("Error during login:", error);
+        console.error("Error during signup:", error);
       }
 }
 const handlelogin = async (e) => {
@@ -63,7 +64,7 @@ const handlelogin = async (e) => {
         <input
           type="text"
           name="text"
-          id="text"
+          id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Name"
@@ -100,7 +101,7 @@ const handlelogin = async (e) => {
           className="btn btn-primary"
           onClick={handleSubmit}
         >
-          Sing Up
+          Sign Up
         </button>
       </div>
       <div style={{ margin: "5px" }}>

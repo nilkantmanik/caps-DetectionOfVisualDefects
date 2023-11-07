@@ -20,11 +20,11 @@ function Footer() {
 
         <div className="col">
             <h3 id="navbar-titles">Mail Us At</h3>
+            <p className="navbar-p">nilkantmanik@gmail.com</p>
             <p className="navbar-p">ssatishbalathe@gmail.com</p>
-            <p className="navbar-p">nilkantmanik7259@gmail.com</p>
         </div>
       </div>
-      <p> Copyright &copy; 2021 | All Rights Reserved</p>
+      <p style={{marginTop:"8px"}}> Copyright &copy; 2023 | All Rights Reserved</p>
     </div>
   );
 }

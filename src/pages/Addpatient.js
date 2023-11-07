@@ -4,19 +4,19 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import "./addpatient.css";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 
 import capsbr from '../images/capsbr.PNG'
 
 function Addpatient() {
-  const [email, setEmail] = useState("");
+  const [patientemail, setEmail] = useState("");
   // const [useremail, setuserEmail] = useState("");
   const [name, setName] = useState('');
   const navigate = useNavigate();
 
-  let useremail = useSelector(state => state.doctoremail);
-  console.log("here",useremail)
+  // let useremail = useSelector(state => state.doctoremail);
+  let useremail = JSON.parse(localStorage.getItem("loggedinemail")).loggedinemail;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,13 +24,13 @@ function Addpatient() {
       const response = await axios.post("http://localhost:4000/api/user/addpatient", {
         useremail,
         name,
-        email,
+        patientemail,
       });
       console.log(response.data);
       alert("Patient Added Successfully");
       navigate("/home");
     } catch (error) {
-      alert("Patient with this Email Already exists");
+      alert("Patient valid Email and Name");
     }
   };
 
@@ -94,13 +94,13 @@ function Addpatient() {
       </div>
 
       <div className="form-group" style={{ margin: "5px" }}>
-        <label htmlFor="email"></label>
+        <label htmlFor="patientemail"></label>
 
         <input
-          type="email"
-          name="email"
-          id="email"
-          value={email}
+          type="patientemail"
+          name="patientemail"
+          id="patientemail"
+          value={patientemail}
           onChange={(e) => setEmail(e.target.value)}
           placeholder=" Patient Email"
         />

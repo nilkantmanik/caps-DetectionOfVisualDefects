@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup.js';
 import Patientlist from './pages/Patientlist.js';
+import Tipspage from './pages/Tipspage.js'
 
 
 // import NewHome from "./pages/NewHome.js";
@@ -24,6 +25,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/addpatient" element={<Addpatient />} />
           <Route path="/patientlist" element={<Patientlist />} />
+          <Route path="/tips" element={<Tipspage />} />
+
          
         </Routes>
       </Router>

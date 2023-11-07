@@ -5,7 +5,7 @@ import HalfBannerImage from "../assets/bg.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 
 import { Link } from "react-router-dom";
@@ -21,7 +21,8 @@ function Home() {
     setSelectedImage(file);
   };
 
-  let useremail = useSelector((state) => state.doctoremail);
+  // let useremail = useSelector((state) => state.doctoremail);
+  let useremail = JSON.parse(localStorage.getItem("loggedinemail")).loggedinemail;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +41,8 @@ function Home() {
         patientemail,
         prediction: res.data.class,
       };
+
+      console.log(predictionData);
     
       axios.put("http://localhost:4000/api/user/addprediction", predictionData);
 
@@ -79,19 +82,32 @@ function Home() {
           <h1 className="title">Detection of Visual Defects in Children</h1>
           <div className="detect-cntr">
             {data ? (
+              <>
+              <div className="resultdiv" style={{width:"20rem",position:"relative",top:"5rem",left:"36rem",maxWidth:"100%"}}>
+
+              <h1  style={{fontSize:"75px",fontWeight:"600",color:"white"}}> Result</h1>
+              </div>
               <div
                 style={{
                   position: "relative",
-                  top: "5rem",
-                  left: "5rem",
+                  top: "8rem",
+                  left: "10rem",
                   height: "25rem",
                   color: "white",
                   fontSize: "25px",
+                  
                 }}
               >
-                <h2>predicted disease is {data.class}</h2>
-                <h2>confidence {data.confidence}</h2>
+                
+                
+                {/* <h2>Prediction for the input image is -- {data.class}</h2> */}
+                <div classname="predictiontext" style={{height:"4rem",width:"33rem",backgroundColor:"white",borderRadius:"61px",position:"relative",left:"18rem"}}>
+                <h2 style={{color:"#3f3e3e" ,position:"relative",top:"1rem",left:"12rem"}} > <span style={{fontWeight:"bold"}}>{data.class}</span></h2>
+
+                </div>
+                
               </div>
+              </>
             ) : (
               <div>
                 <div id="patinputdiv" style={{position:"relative",top:"150px",left:"100px"}}>

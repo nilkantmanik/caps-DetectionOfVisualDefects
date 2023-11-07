@@ -25,6 +25,7 @@ function Login() {
       });
       console.log(response);
       dispatch(addEmail(email));
+      localStorage.setItem("loggedinemail", JSON.stringify({loggedinemail: email}));
       navigate("/home");
     } catch (error) {
       console.error("Error during login:", error);
@@ -97,7 +98,7 @@ function Login() {
       </div>
       <div style={{ margin: "5px" }}>
         <button type="submit" className="btn btn-primary" onClick={handlesignup}>
-          Sign Up
+          Register 
         </button>
       </div>
     </div>

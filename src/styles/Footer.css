@@ -24,6 +24,8 @@
   #navbar-titles {
     text-align: center;
     text-decoration: underline;
+    margin: 8px 3px;
+    text-decoration: none;
   }
 
   .footer .upperside {
